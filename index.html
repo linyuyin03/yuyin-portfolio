@@ -1,107 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Yuyin Lin | SSCI 591</title>
-
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Yuyin Lin | Software Engineer & GIS</title>
+    <meta
+        name="description"
+        content="Yuyin Lin's personal portfolio and Web GIS project."
+    >
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
-
     <!-- Leaflet CSS -->
     <link
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     >
-
     <!-- Leaflet JavaScript -->
     <script
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
     </script>
 </head>
-
-
-<body>
-
-    <header>
-        <h1>Yuyin Lin</h1>
-        <p class="course-title">
-            SSCI 591 — Web & Mobile GIS — Fall 2026
-        </p>
-    </header>
-
-
-    <main>
-
-        <!-- My photo -->
-        <img
-            src="images/photo.jpg"
-            alt="A photo of Yuyin Lin"
-            class="portrait"
-        >
-
-
-        <h2>About Me</h2>
-
-        <p>
-            Hi! My name is Yuyin Lin, and I am a graduate student
-            studying Geographic Information Science and Technology
-            at the University of Southern California.
-        </p>
-
-        <p>
-            My academic background is in Computer Science and Technology.
-            I am interested in Web GIS, software engineering,
-            artificial intelligence, and geospatial technologies.
-        </p>
-
-        <p>
-            I enjoy building practical applications that combine
-            software development with GIS and intelligent systems.
-        </p>
-
-
-        <div class="clear"></div>
-
-
-        <h2>My Map</h2>
-
-        <p>
-            This interactive map shows USC and my hometown.
-            Use the buttons below to move between the two locations.
-        </p>
-
-
-        <!-- The map -->
-        <div id="map"></div>
-
-
-        <!-- Buttons -->
-        <div class="buttons">
-            <button id="home-button">Take Me Home</button>
-
-            <button id="usc-button">Back to USC</button>
+<body id="home">
+    <!-- =========================
+         Navigation
+    ========================== -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                Yuyin Lin
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">Geo Journey</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-
-
-        <p id="status">
-            Click a button and watch the map move.
-        </p>
-
-
+    </nav>
+    <main>
+        <!-- =========================
+             About Me
+        ========================== -->
+        <section
+            id="about"
+            class="section"
+        >
+            <h1 class="section-title">About Me</h1>
+            <div class="about-section">
+                <div class="about-text">
+                    <p>
+                        Hi! I'm Yuyin Lin, a graduate student studying
+                        Geographic Information Science and Technology
+                        at the University of Southern California.
+                    </p>
+                    <p>
+                        My academic background is in Computer Science
+                        and Technology. I am particularly interested in
+                        the intersection of software engineering,
+                        artificial intelligence, and GIS.
+                    </p>
+                    <p>
+                        My experience includes building LLM-powered
+                        agents, full-stack web applications, real-time
+                        systems, and scalable data platforms. I enjoy
+                        turning complex technical problems into
+                        practical and user-friendly products.
+                    </p>
+                </div>
+                <div class="portrait-container">
+                    <img
+                        src="images/photo.jpg"
+                        alt="Portrait of Yuyin Lin"
+                        class="portrait"
+                    >
+                </div>
+            </div>
+        </section>
+        <!-- =========================
+             Skills
+        ========================== -->
+        <section
+            id="skills"
+            class="section alternate-section"
+        >
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                        <span>C/C++</span>
+                        <span>Go</span>
+                        <span>SQL</span>
+                        <span>TypeScript</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>FastAPI</span>
+                        <span>Django</span>
+                        <span>Flask</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Data & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
+                        <span>MongoDB</span>
+                        <span>Elasticsearch</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>GIS & Web</h3>
+                    <div class="skill-tags">
+                        <span>Leaflet</span>
+                        <span>OpenStreetMap</span>
+                        <span>Web GIS</span>
+                        <span>Interactive Maps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========================
+             Experience
+        ========================== -->
+        <section
+            id="experience"
+            class="section"
+        >
+            <h2 class="section-title">
+                Experience
+            </h2>
+            <div class="timeline">
+                <!-- Peblla -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>
+                                Software Engineer Intern
+                            </h3>
+                            <h4>
+                                Peblla
+                            </h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>
+                                May 2026 – Aug 2026
+                            </span>
+                            <span>
+                                Maryland
+                            </span>
+                        </div>
+                    </div>
+                    <p class="experience-summary">
+                        Built reliable AI-powered retail tools and
+                        real-time POS workflows from end to end.
+                    </p>
+                    <details class="experience-details">
+                        <summary>View details</summary>
+                        <div class="details-content">
+                            <ul>
+                                <li>
+                                    Built an end-to-end LLM-powered
+                                    transaction agent supporting
+                                    multimodal inputs and natural-language
+                                    execution of retail operations.
+                                </li>
+                                <li>
+                                    Designed validation, fallback, retry,
+                                    and recovery mechanisms across model
+                                    inference and tool execution to improve
+                                    reliability.
+                                </li>
+                                <li>
+                                    Engineered POS and Kitchen Display
+                                    System functionality using FastAPI,
+                                    Jinja2, SQLite, Linux, Android, and
+                                    server-sent events.
+                                </li>
+                            </ul>
+                            <div class="technology-list">
+                                <span>LLM Agents</span>
+                                <span>FastAPI</span>
+                                <span>Jinja2</span>
+                                <span>SQLite</span>
+                                <span>Linux</span>
+                                <span>Android</span>
+                                <span>SSE</span>
+                            </div>
+                        </div>
+                    </details>
+                </article>
+                <!-- Testin -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>
+                                Software Engineer Intern
+                            </h3>
+                            <h4>
+                                Beijing Testin Information Technology
+                            </h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>
+                                Jun 2025 – Aug 2025
+                            </span>
+                            <span>
+                                Beijing
+                            </span>
+                        </div>
+                    </div>
+                    <p class="experience-summary">
+                        Developed a full-stack RAG platform with
+                        real-time AI chat and scalable data services.
+                    </p>
+                    <details class="experience-details">
+                        <summary>View details</summary>
+                        <div class="details-content">
+                            <ul>
+                                <li>
+                                    Architected a full-stack
+                                    Retrieval-Augmented Generation platform
+                                    using React, FastAPI, Kubernetes, and a
+                                    customizable knowledge base.
+                                </li>
+                                <li>
+                                    Built an intelligent chatbot using
+                                    LangChain, vLLM, and WebSocket streaming
+                                    for real-time conversations.
+                                </li>
+                                <li>
+                                    Developed a scalable data pipeline using
+                                    Redis, PostgreSQL, Milvus, MinIO, and
+                                    Elasticsearch.
+                                </li>
+                            </ul>
+                            <div class="technology-list">
+                                <span>React</span>
+                                <span>FastAPI</span>
+                                <span>LangChain</span>
+                                <span>vLLM</span>
+                                <span>WebSocket</span>
+                                <span>Kubernetes</span>
+                                <span>Redis</span>
+                                <span>PostgreSQL</span>
+                                <span>Milvus</span>
+                                <span>MinIO</span>
+                                <span>Elasticsearch</span>
+                            </div>
+                        </div>
+                    </details>
+                </article>
+                <!-- Eastdawn -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>
+                                Software Engineer Intern
+                            </h3>
+                            <h4>
+                                Eastdawn Information Technology
+                            </h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span>
+                                Jun 2024 – Aug 2024
+                            </span>
+                            <span>
+                                Beijing
+                            </span>
+                        </div>
+                    </div>
+                    <p class="experience-summary">
+                        Built a scalable collaboration platform for
+                        low-latency teamwork and live data updates.
+                    </p>
+                    <details class="experience-details">
+                        <summary>View details</summary>
+                        <div class="details-content">
+                            <ul>
+                                <li>
+                                    Built a scalable real-time collaboration
+                                    platform supporting thousands of
+                                    concurrent users and low-latency updates.
+                                </li>
+                                <li>
+                                    Designed collaboration workflows including
+                                    task assignment, role-based access control,
+                                    real-time dashboards, and data
+                                    synchronization.
+                                </li>
+                            </ul>
+                            <div class="technology-list">
+                                <span>Vue.js</span>
+                                <span>Django</span>
+                                <span>WebSocket</span>
+                                <span>Redis</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </section>
+        <!-- =========================
+             Projects
+        ========================== -->
+        <section
+            id="projects"
+            class="section alternate-section"
+        >
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>
+                        LLM-Powered Transaction Agent
+                    </h3>
+                    <p>
+                        An intelligent retail agent supporting
+                        natural-language execution, multimodal
+                        inputs, transaction workflows, reporting,
+                        and operational analysis.
+                    </p>
+                    <div class="technology-list">
+                        <span>LLM</span>
+                        <span>AI Agents</span>
+                        <span>FastAPI</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>
+                        Full-Stack RAG Platform
+                    </h3>
+                    <p>
+                        A scalable knowledge platform integrating
+                        document processing, vector retrieval,
+                        real-time chat, and customizable knowledge
+                        bases.
+                    </p>
+                    <div class="technology-list">
+                        <span>React</span>
+                        <span>RAG</span>
+                        <span>Kubernetes</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>
+                        Real-Time Collaboration Platform
+                    </h3>
+                    <p>
+                        A distributed collaboration system supporting
+                        real-time dashboards, task workflows,
+                        low-latency updates, and role-based access.
+                    </p>
+                    <div class="technology-list">
+                        <span>Vue.js</span>
+                        <span>Django</span>
+                        <span>WebSocket</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- =========================
+             Geo Journey
+        ========================== -->
+        <section
+            id="journey"
+            class="section"
+        >
+            <h2 class="section-title">
+                My Geo Journey
+            </h2>
+            <p class="journey-description">
+                This interactive map connects important locations
+                in my academic and professional journey, from
+                Beijing to the University of Southern California
+                and my software engineering experience in Maryland.
+            </p>
+            <!-- Interactive Leaflet map; controls below select each stop. -->
+            <div id="map" role="region" aria-label="Interactive map of Beijing, USC, and Maryland" aria-describedby="map-help"></div>
+            <div class="map-controls">
+                <button type="button"
+                    id="beijing-button"
+                    data-location="beijing"
+                    class="map-button"
+                >
+                    Beijing
+                </button>
+                <button type="button"
+                    id="usc-button"
+                    data-location="usc"
+                    class="map-button"
+                >
+                    USC
+                </button>
+                <button type="button"
+                    id="maryland-button"
+                    data-location="maryland"
+                    class="map-button"
+                >
+                    Maryland
+                </button>
+                <button type="button"
+                    id="journey-button"
+                    class="map-button primary-map-button"
+                >
+                    Show Full Journey
+                </button>
+            </div>
+            <p id="map-help">Drag to pan, use + / − to zoom, or select a marker to learn more. The red line connects Beijing → USC → Maryland.</p>
+            <p id="status" role="status" aria-live="polite">
+                Select a location or explore the full journey.
+            </p>
+        </section>
+        <!-- =========================
+             Contact
+        ========================== -->
+        <section
+            id="contact"
+            class="section contact-section"
+        >
+            <h2 class="section-title">
+                Contact
+            </h2>
+            <p class="contact-description">
+                I'm interested in software engineering,
+                AI systems, full-stack development, and
+                geospatial technologies.
+            </p>
+            <div class="contact-links">
+                <a
+                    href="mailto:yuyinlin@usc.edu"
+                    class="contact-button"
+                >
+                    USC Email
+                </a>
+                <a
+                    href="mailto:linyuyin03@gmail.com"
+                    class="contact-button"
+                >
+                    Personal Email
+                </a>
+                <a
+                    href="https://github.com/linyuyin03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-button"
+                >
+                    GitHub
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/yuyin-lin-7377b4361/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-button"
+                >
+                    LinkedIn
+                </a>
+            </div>
+        </section>
     </main>
-
-
+    <!-- =========================
+         Footer
+    ========================== -->
     <footer>
-        <p>Built for SSCI 591 — Fall 2026.</p>
+        <p>
+            © 2026 Yuyin Lin
+        </p>
+        <p>
+            Built with HTML, CSS, JavaScript, Leaflet,
+            and OpenStreetMap for SSCI 591.
+        </p>
     </footer>
-
-
     <!-- My JavaScript -->
     <script src="app.js"></script>
-
 </body>
-
 </html>
