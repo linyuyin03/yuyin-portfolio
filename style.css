@@ -906,6 +906,28 @@ button {
 
 
 
+.travel-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.travel-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: #e6dfd7;
+}
+
+@media (max-width: 700px) {
+    .travel-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-section {
 
     text-align: center;
