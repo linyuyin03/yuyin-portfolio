@@ -306,3 +306,13 @@ journeyButton.addEventListener(
 
 
 markers.usc.openPopup();
+
+const focusButton = document.getElementById("focus-button");
+const focusOutput = document.getElementById("focus-output");
+
+function showCurrentFocus() {
+    focusOutput.textContent =
+        "Current focus: AI agents, software engineering, and GIS.";
+}
+
+focusButton.addEventListener("click", showCurrentFocus);
