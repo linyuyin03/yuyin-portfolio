@@ -119,3 +119,9 @@ yuyin-portfolio/
 │
 └── images/
     └── photo.jpg
+```
+
+## Journey Table
+
+The journey table below the map summarizes Beijing, USC, and Maryland with
+Location, Connection, and Focus columns.

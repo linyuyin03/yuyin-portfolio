@@ -1,21 +1,3 @@
-/* ==========================================
-   Yuyin Lin - Interactive Geo Journey
-   SSCI 591 Web & Mobile GIS
-========================================== */
-
-
-/* ==========================================
-   1. Important Locations
-========================================== */
-
-
-/*
-Leaflet coordinates use:
-
-[latitude, longitude]
-*/
-
-
 const locations = {
 
     beijing: {
@@ -87,9 +69,6 @@ const locations = {
 
 
 
-/* ==========================================
-   2. Create Map
-========================================== */
 
 
 const map = L.map("map").setView(
@@ -99,9 +78,6 @@ const map = L.map("map").setView(
 
 
 
-/* ==========================================
-   3. OpenStreetMap Basemap
-========================================== */
 
 
 L.tileLayer(
@@ -118,26 +94,10 @@ L.tileLayer(
 ).addTo(map);
 
 
-
-/* ==========================================
-   4. Add Scale Control
-========================================== */
-
-
 L.control.scale({
-
     metric: true,
-
     imperial: true
-
 }).addTo(map);
-
-
-
-/* ==========================================
-   5. Create Markers
-========================================== */
-
 
 const markers = {};
 
@@ -164,20 +124,8 @@ Object.keys(locations).forEach(function (key) {
 
 
 
-/* ==========================================
-   6. Journey Route
-========================================== */
 
 
-/*
-Create one geographic journey line:
-
-Beijing
-   ↓
-Los Angeles
-   ↓
-Maryland
-*/
 
 
 const journeyCoordinates = [
@@ -212,9 +160,6 @@ const journeyLine = L.polyline(
 
 
 
-/* ==========================================
-   7. Status
-========================================== */
 
 
 const statusText =
@@ -222,9 +167,6 @@ const statusText =
 
 
 
-/* ==========================================
-   8. Fly to a Location
-========================================== */
 
 
 function flyToLocation(key) {
@@ -263,9 +205,6 @@ function flyToLocation(key) {
 
 
 
-/* ==========================================
-   9. Location Buttons
-========================================== */
 
 
 document
@@ -316,9 +255,6 @@ document
 
 
 
-/* ==========================================
-   11. Show Full Journey
-========================================== */
 
 
 const journeyButton =
@@ -335,12 +271,6 @@ journeyButton.addEventListener(
     "click",
 
     function () {
-
-
-        /*
-        Add the line only once.
-        */
-
         if (!journeyVisible) {
 
             journeyLine.addTo(map);
@@ -348,12 +278,6 @@ journeyButton.addEventListener(
             journeyVisible = true;
 
         }
-
-
-        /*
-        Automatically zoom so all locations
-        are visible.
-        */
 
         map.fitBounds(
 
@@ -370,7 +294,6 @@ journeyButton.addEventListener(
 
         );
 
-
         statusText.textContent =
             "Showing my academic and professional journey from Beijing to Los Angeles and Maryland.";
 
@@ -380,9 +303,6 @@ journeyButton.addEventListener(
 
 
 
-/* ==========================================
-   14. Initial Popup
-========================================== */
 
 
 markers.usc.openPopup();
