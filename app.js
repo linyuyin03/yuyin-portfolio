@@ -76,10 +76,6 @@ const map = L.map("map").setView(
     5
 );
 
-
-
-
-
 L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 
@@ -170,37 +166,20 @@ const statusText =
 
 
 function flyToLocation(key) {
-
     const location = locations[key];
-
-
     map.flyTo(
-
         location.coordinates,
-
         location.zoom,
-
         {
-
             animate: true,
-
             duration: 1.5
-
         }
-
     );
-
-
     setTimeout(function () {
-
         markers[key].openPopup();
-
     }, 1500);
-
-
     statusText.textContent =
         `Exploring ${location.name}.`;
-
 }
 
 
