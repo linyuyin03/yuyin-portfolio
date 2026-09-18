@@ -1,6 +1,3 @@
-/* ==============================
-   Global
-============================== */
 
 * {
     box-sizing: border-box;
@@ -42,9 +39,6 @@ button {
 }
 
 
-/* ==============================
-   Navigation
-============================== */
 
 .navbar {
 
@@ -122,9 +116,6 @@ button {
 
 
 
-/* ==============================
-   Hero
-============================== */
 
 .hero {
 
@@ -277,9 +268,6 @@ button {
 
 
 
-/* ==============================
-   Sections
-============================== */
 
 .section {
 
@@ -336,9 +324,6 @@ button {
 
 
 
-/* ==============================
-   About
-============================== */
 
 .about-section {
 
@@ -445,9 +430,6 @@ button {
 
 
 
-/* ==============================
-   Skills
-============================== */
 
 .skill-grid {
 
@@ -519,9 +501,6 @@ button {
 
 
 
-/* ==============================
-   Experience
-============================== */
 
 .timeline {
 
@@ -612,9 +591,6 @@ button {
 
 
 
-/* ==============================
-   Technology Tags
-============================== */
 
 .technology-list {
 
@@ -645,9 +621,6 @@ button {
 
 
 
-/* ==============================
-   Projects
-============================== */
 
 .project-grid {
 
@@ -711,9 +684,6 @@ button {
 
 
 
-/* ==============================
-   Geo Journey
-============================== */
 
 .journey-description {
 
@@ -801,9 +771,6 @@ button {
 }
 
 
-/* Important:
-   Leaflet map requires height.
-*/
 
 #map {
 
@@ -876,13 +843,9 @@ button {
 
 
 #status {
-
     min-height: 26px;
-
     margin-top: 16px;
-
     color: #77716b;
-
     font-style: italic;
 }
 
@@ -923,7 +886,6 @@ button {
 
 
 .journey-summary strong {
-
     font-family: Georgia, serif;
 
     font-size: 2rem;
@@ -943,9 +905,6 @@ button {
 
 
 
-/* ==============================
-   Contact
-============================== */
 
 .contact-section {
 
@@ -968,7 +927,6 @@ button {
         30px;
 
     color: #55504b;
-
     font-size: 1.05rem;
 }
 
@@ -1004,17 +962,12 @@ button {
 
 
 .contact-button:hover {
-
     background-color: #720000;
-
     transform: translateY(-2px);
 }
 
 
 
-/* ==============================
-   Footer
-============================== */
 
 footer {
 
@@ -1038,9 +991,6 @@ footer p {
 
 
 
-/* ==============================
-   Responsive Design
-============================== */
 
 @media (max-width: 900px) {
 
@@ -1149,4 +1099,54 @@ footer p {
         border-bottom: 1px solid #ddd6ce;
     }
 
+}
+
+.section, #map {
+    scroll-margin-top: 85px;
+}
+
+.journey-table-wrapper {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+.journey-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    text-align: left;
+    background: #fff;
+}
+
+.journey-table caption {
+    text-align: left;
+    font: 700 1.6rem Georgia, serif;
+    color: #990000;
+    padding-bottom: 22px;
+}
+
+.journey-table th, .journey-table td {
+    padding: 18px;
+    border-bottom: 1px solid #e3ddd4;
+    vertical-align: top;
+}
+
+.journey-table thead {
+    background: #990000;
+    color: #fff;
+}
+
+.journey-table tbody tr:nth-child(even) {
+    background: #f8f5f0;
+}
+
+button:focus-visible, a:focus-visible, .journey-table-wrapper:focus-visible {
+    outline: 3px solid #990000;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
