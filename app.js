@@ -289,9 +289,15 @@ markers.usc.openPopup();
 const focusButton = document.getElementById("focus-button");
 const focusOutput = document.getElementById("focus-output");
 
-function showCurrentFocus() {
+function toggleCurrentFocus() {
+    const isExpanded = focusOutput.hidden;
+    focusOutput.hidden = !isExpanded;
     focusOutput.textContent =
         "Current focus: AI agents, software engineering, and GIS.";
+    focusButton.textContent = isExpanded
+        ? "Hide Current Focus"
+        : "Show Current Focus";
+    focusButton.setAttribute("aria-expanded", String(isExpanded));
 }
 
-focusButton.addEventListener("click", showCurrentFocus);
+focusButton.addEventListener("click", toggleCurrentFocus);
